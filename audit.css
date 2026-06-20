@@ -1,0 +1,19 @@
+/* Final accessibility and interaction polish. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+[id] { scroll-margin-top: 92px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.project-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.project-unavailable, .button-disabled { border: 0; background: transparent; color: #71899a; font: 600 11px var(--sans); cursor: not-allowed; }
+.button-disabled { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(160, 207, 233, .12); border-radius: 8px; padding: 9px 11px; }
+.project-unavailable:disabled { opacity: .78; }
+.responsibilities { margin: 13px 0 16px; padding-left: 18px; color: #b7c8d4; font-size: 12px; line-height: 1.65; }
+.responsibilities li + li { margin-top: 4px; }
+.form-error { color: #ffb5a8 !important; }
+.social-links .button-disabled { width: 28px; height: 28px; padding: 0; color: #71889b; font: 500 9px var(--mono); }
+.tech-pills span, .tags span, .section-label, .eyebrow, .project-meta, .timeline-kicker, .timeline-date { font-size: 11px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+@media (min-width: 1000px) { .hero-actions { row-gap: 10px; } }

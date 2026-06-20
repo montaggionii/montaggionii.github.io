@@ -1,0 +1,27 @@
+/* Additions kept separate so deployment-focused updates are easy to identify. */
+.opportunities {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 22px;
+  padding: 29px 34px;
+  background: linear-gradient(100deg, rgba(17, 58, 72, .72), rgba(8, 25, 41, .88));
+  border: 1px solid rgba(91, 229, 255, .22);
+  border-radius: 11px;
+}
+.opportunities .eyebrow { margin-bottom: 8px; }
+.opportunities h2 { font-size: 20px; letter-spacing: -.8px; margin-bottom: 5px; }
+.opportunities div > p:last-child { max-width: 700px; margin: 0; color: #a7bdcb; font-size: 12px; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 17px; }
+.contact-actions .button { padding: 9px 11px; font-size: 10px; }
+
+@media (max-width: 800px) {
+  .opportunities { grid-template-columns: auto 1fr; }
+  .opportunities .button { grid-column: 2; width: max-content; }
+}
+
+@media (max-width: 540px) {
+  .opportunities { grid-template-columns: 1fr; padding: 24px; }
+  .opportunities > .pulse { display: none; }
+  .opportunities .button { grid-column: auto; width: 100%; }
+}
