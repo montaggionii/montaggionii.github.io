@@ -15,6 +15,10 @@ No requiere backend, base de datos, servicios de pago ni tarjeta bancaria. Puede
 - Java, Spring Boot, Angular, APIs REST, MySQL, MongoDB, n8n, OpenAI y prácticas de ciberseguridad como contenido del portfolio.
 - GitHub Actions para compilación y despliegue automático en GitHub Pages.
 
+## Caso de estudio principal
+
+FidelyFood es el Trabajo Final de Grado de Anthony Montagioni: una plataforma de fidelización multi-restaurante construida con Angular/Ionic, Java, Spring Boot, MySQL, JWT y API REST. El caso de estudio técnico está disponible en [projects/fidelyfood/](projects/fidelyfood/) y la memoria oficial se publica junto a la página.
+
 ## Capturas
 
 No se incluyen capturas estáticas para que el repositorio permanezca ligero. La vista definitiva se puede revisar localmente con `npm run dev` o en la URL de GitHub Pages después de publicar.
@@ -123,6 +127,9 @@ Si más adelante prefieres recepción de formularios sin depender del cliente de
 .
 ├── .github/workflows/deploy-pages.yml  # Despliegue automático gratuito
 ├── public/cv/                           # CV PNG descargable
+├── public/projects/fidelyfood/           # Memoria TFG y diagramas SVG
+├── projects/fidelyfood/                  # Caso de estudio técnico
+├── assets/                               # CSS y JavaScript del caso de estudio
 ├── dist/                               # Sitio compilado para publicar
 ├── scripts/build.mjs                   # Build sin dependencias
 ├── scripts/serve.mjs                   # Servidor local sin dependencias

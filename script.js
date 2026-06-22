@@ -97,6 +97,7 @@ const projects = {
 };
 
 const modal = document.querySelector('#project-modal');
+let modalTrigger = null;
 const fillModal = (project) => {
   modal.querySelector('.modal-index').textContent = project.index;
   modal.querySelector('#modal-title').textContent = project.title;
@@ -105,9 +106,12 @@ const fillModal = (project) => {
   modal.querySelector('.modal-tags').innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join('');
 };
 document.querySelectorAll('.project-detail').forEach((button) => button.addEventListener('click', () => {
+  if (!button.dataset.project) return;
+  modalTrigger = button;
   fillModal(projects[button.dataset.project]);
   modal.showModal();
 }));
+modal.addEventListener('close', () => modalTrigger?.focus());
 document.querySelector('.modal-close').addEventListener('click', () => modal.close());
 modal.addEventListener('click', (event) => {
   if (event.target === modal) modal.close();

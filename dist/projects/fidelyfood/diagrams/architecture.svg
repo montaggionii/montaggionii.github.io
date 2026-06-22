@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura general de FidelyFood</title><desc id="desc">Las aplicaciones Angular e Ionic se comunican por una API REST con Spring Boot, protegida por JWT y conectada a MySQL mediante JPA e Hibernate.</desc>
+  <style>.bg{fill:#0b1929}.box{fill:#102942;stroke:#5be5ff;stroke-opacity:.55;stroke-width:2}.mid{fill:#123652}.data{fill:#10243a}.title{fill:#f1f6fb;font:700 25px Arial,sans-serif}.text{fill:#b9cfdd;font:17px Arial,sans-serif}.label{fill:#5be5ff;font:600 13px monospace;letter-spacing:1px}.line{stroke:#5be5ff;stroke-width:3;stroke-dasharray:7 8;opacity:.8}</style>
+  <rect class="bg" width="1200" height="590" rx="24"/>
+  <text x="60" y="65" class="label">FIDELYFOOD · ARQUITECTURA DE SISTEMA</text>
+  <rect class="box" x="60" y="128" width="265" height="160" rx="16"/><text x="90" y="176" class="title">Ionic / Angular</text><text x="90" y="211" class="text">App de usuario</text><text x="90" y="240" class="text">Panel restaurante</text><text x="90" y="269" class="text">Guard + interceptor JWT</text>
+  <line class="line" x1="325" y1="208" x2="457" y2="208"/><polygon fill="#5be5ff" points="457,208 441,199 441,217"/>
+  <rect class="mid" x="465" y="100" width="310" height="216" rx="16"/><text x="495" y="148" class="title">Spring Boot API</text><text x="495" y="184" class="text">Controllers · Services</text><text x="495" y="213" class="text">DAO · JPA / Hibernate</text><text x="495" y="242" class="text">REST · OpenAPI</text><text x="495" y="286" class="label">SPRING SECURITY + JWT</text>
+  <line class="line" x1="775" y1="208" x2="907" y2="208"/><polygon fill="#5be5ff" points="907,208 891,199 891,217"/>
+  <rect class="data" x="915" y="128" width="225" height="160" rx="16"/><text x="945" y="176" class="title">MySQL</text><text x="945" y="211" class="text">Usuarios</text><text x="945" y="240" class="text">Restaurantes</text><text x="945" y="269" class="text">Puntos y canjes</text>
+  <rect class="box" x="208" y="390" width="245" height="120" rx="16"/><text x="238" y="437" class="title">Roles</text><text x="238" y="473" class="text">USER · RESTAURANT · ADMIN</text>
+  <rect class="box" x="482" y="390" width="245" height="120" rx="16"/><text x="512" y="437" class="title">Flujos de negocio</text><text x="512" y="473" class="text">QR · puntos · promociones</text>
+  <rect class="box" x="757" y="390" width="245" height="120" rx="16"/><text x="787" y="437" class="title">Trazabilidad</text><text x="787" y="473" class="text">Movimientos por restaurante</text>
+</svg>

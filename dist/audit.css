@@ -6,6 +6,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .project-unavailable, .button-disabled { border: 0; background: transparent; color: #71899a; font: 600 11px var(--sans); cursor: not-allowed; }
 .button-disabled { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(160, 207, 233, .12); border-radius: 8px; padding: 9px 11px; }
 .project-unavailable:disabled { opacity: .78; }
+.project-actions .project-detail { text-decoration: none; }
+.project-badge { display: inline-flex; margin:-10px 0 13px; padding:5px 7px; border:1px solid rgba(91,229,255,.46); border-radius:4px; color:var(--cyan); background:rgba(91,229,255,.08); font:600 9px var(--mono); letter-spacing:.45px; }
+.fidelyfood-visual { display:flex; align-items:center; justify-content:center; gap:28px; overflow:hidden; background:radial-gradient(circle at 68% 45%,rgba(91,229,255,.2),transparent 36%),linear-gradient(135deg,#0b2940,#101c37); }
+.fidelyfood-qr { display:grid; grid-template-columns:repeat(5,16px); grid-template-rows:repeat(5,16px); gap:4px; padding:13px; border:1px solid rgba(91,229,255,.45); background:#d8fbff; box-shadow:0 0 35px rgba(91,229,255,.22); }
+.fidelyfood-qr i { min-width:16px; min-height:16px; background:#0a263c; }.fidelyfood-qr i:nth-child(2n),.fidelyfood-qr i:nth-child(5),.fidelyfood-qr i:nth-child(8),.fidelyfood-qr i:nth-child(17){background:transparent}.fidelyfood-system{display:grid;gap:9px;color:#b4d2e2;font:500 10px var(--mono);letter-spacing:.5px}.fidelyfood-system b{color:var(--cyan);font-size:12px}.fidelyfood-featured .project-info{padding:28px}
 .responsibilities { margin: 13px 0 16px; padding-left: 18px; color: #b7c8d4; font-size: 12px; line-height: 1.65; }
 .responsibilities li + li { margin-top: 4px; }
 .form-error { color: #ffb5a8 !important; }
@@ -17,3 +22,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .reveal { opacity: 1; transform: none; }
 }
 @media (min-width: 1000px) { .hero-actions { row-gap: 10px; } }
+@media (max-width:540px){.fidelyfood-visual{gap:17px}.fidelyfood-qr{grid-template-columns:repeat(5,11px);grid-template-rows:repeat(5,11px);gap:3px;padding:9px}.fidelyfood-qr i{min-width:11px;min-height:11px}.fidelyfood-system{font-size:8px}.fidelyfood-system b{font-size:9px}}
