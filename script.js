@@ -71,28 +71,46 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 
 const projects = {
   valenruta: {
-    index: '01 / FULL STACK', title: 'ValenRuta',
-    description: 'Plataforma de movilidad compartida que conecta conductores y pasajeros para publicar, encontrar y reservar viajes.',
+    index: '02 / FULL STACK · EN DOCUMENTACIÓN', title: 'ValenRuta',
+    description: 'Proyecto de movilidad compartida orientado a publicar viajes, localizar plazas y gestionar reservas entre conductores y pasajeros.',
     features: ['Registro y autenticación de usuarios', 'Gestión de vehículos y publicación de viajes', 'Reserva de plazas y control de permisos', 'Validaciones de negocio en backend'],
-    tags: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'JWT']
-  },
-  fidelyapp: {
-    index: '02 / MOBILE & WEB', title: 'FidelyApp',
-    description: 'Sistema de fidelización para restauración basado en experiencias sencillas de usar y valiosas para los negocios locales.',
-    features: ['Sistema de puntos y recompensas', 'QR de identificación de usuario', 'Promociones y canje de beneficios', 'Geolocalización de restaurantes'],
-    tags: ['Spring Boot', 'Angular/Ionic', 'MySQL']
+    tags: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'JWT'], status: 'Resumen técnico documentado', evidence: 'Repositorio, demo y caso de estudio ampliado pendientes de publicación.', scopeLabel: 'Funcionalidades documentadas'
   },
   santopecado: {
-    index: '03 / WEB APP', title: 'Santo Pecado Web',
-    description: 'Aplicación de reservas y operación de eventos sociales que digitaliza el control de asistentes de principio a fin.',
+    index: '08 / WEB APP · EN DOCUMENTACIÓN', title: 'Santo Pecado Web',
+    description: 'Proyecto web para centralizar reservas y gestión de asistentes de eventos sociales mediante una interfaz administrativa.',
     features: ['Reservas online', 'Panel administrativo', 'Gestión y confirmación de asistentes', 'Estadísticas básicas de eventos'],
-    tags: ['Angular', 'Firebase', 'Bootstrap']
+    tags: ['Angular', 'Firebase', 'Bootstrap'], status: 'Resumen técnico documentado', evidence: 'Repositorio, demo, capturas y caso de estudio ampliado pendientes de publicación.', scopeLabel: 'Funcionalidades documentadas'
   },
   photostudio: {
-    index: '04 / AUTOMATION', title: 'Automatización IA para Photo Studio',
-    description: 'Ecosistema de automatización para reducir tareas manuales y conectar canales de negocio, contenido e inteligencia artificial.',
+    index: '03 / AUTOMATION · EXPERIENCIA PROFESIONAL', title: 'Automatización IA para Photo Studio',
+    description: 'Trabajo aplicado a la automatización de procesos internos, conexiones entre herramientas de negocio y asistencia mediante IA.',
     features: ['Flujos internos automatizados con n8n', 'Integración de APIs y herramientas externas', 'Agentes de voz basados en IA', 'Generación de contenido y conexión con CRM'],
-    tags: ['n8n', 'OpenAI', 'APIs', 'WhatsApp Business API', 'CRM']
+    tags: ['n8n', 'OpenAI', 'APIs', 'WhatsApp Business API', 'CRM'], status: 'Experiencia profesional · evidencia pública limitada', evidence: 'No se muestra código, demo ni datos de cliente para preservar la confidencialidad.', scopeLabel: 'Áreas de trabajo descritas'
+  },
+  authlab: {
+    index: '04 / SECURITY · LABORATORIO EN DESARROLLO', title: 'Secure Authentication Lab',
+    description: 'Laboratorio técnico propuesto para demostrar autenticación, autorización por roles y protección de endpoints en una API.',
+    features: ['Implementar login con JWT y refresh tokens', 'Definir roles y permisos de acceso', 'Proteger endpoints con Spring Security', 'Documentar pruebas y ejecución con Docker'],
+    tags: ['Spring Boot', 'Spring Security', 'JWT', 'Angular', 'Docker'], status: 'Alcance propuesto · sin MVP publicado', evidence: 'No representa una funcionalidad terminada. El repositorio se añadirá cuando exista un MVP verificable.', scopeLabel: 'Alcance previsto'
+  },
+  apimonitor: {
+    index: '05 / BACKEND · PROYECTO PERSONAL MVP', title: 'API Monitoring Center',
+    description: 'Proyecto personal propuesto para supervisar disponibilidad, latencia y errores de APIs mediante checks programados.',
+    features: ['Programar comprobaciones de disponibilidad', 'Registrar latencia y códigos de respuesta', 'Persistir resultados para consulta histórica', 'Presentar un panel de observabilidad'],
+    tags: ['Spring Boot', 'Angular', 'Docker', 'MySQL', 'API REST'], status: 'MVP propuesto · sin implementación pública', evidence: 'Se publicará al disponer de checks, persistencia, panel y documentación técnica reales.', scopeLabel: 'Alcance previsto'
+  },
+  aicampaign: {
+    index: '06 / AUTOMATION · EXPERIMENTAL', title: 'AI Campaign Automation',
+    description: 'Proyecto experimental propuesto para clasificar leads, preparar mensajes y registrar actividad mediante automatización e IA.',
+    features: ['Orquestar flujos con n8n', 'Clasificar información con IA en datos de prueba', 'Registrar actividad en un CRM de desarrollo', 'Conectar con APIs y un entorno WhatsApp Sandbox'],
+    tags: ['n8n', 'OpenAI', 'APIs REST', 'CRM', 'WhatsApp Sandbox'], status: 'Experimental · sin campañas ni clientes reales', evidence: 'Solo utilizará datos de prueba y entornos sandbox hasta que exista una implementación demostrable.', scopeLabel: 'Alcance previsto'
+  },
+  securityaudit: {
+    index: '07 / SECURITY · LABORATORIO MVP', title: 'Security Audit Dashboard',
+    description: 'Laboratorio propuesto para revisar cabeceras y configuraciones básicas de aplicaciones de prueba en un entorno controlado.',
+    features: ['Revisar cabeceras HTTP de aplicaciones de prueba', 'Registrar configuraciones básicas de seguridad', 'Mostrar hallazgos en un panel local', 'Documentar límites y entorno autorizado de uso'],
+    tags: ['Spring Boot', 'Angular', 'JWT', 'Docker', 'OWASP'], status: 'MVP propuesto · entorno controlado', evidence: 'No realizará auditorías sobre sistemas de terceros. Se publicará al contar con un MVP reproducible.', scopeLabel: 'Alcance previsto'
   }
 };
 
@@ -100,9 +118,12 @@ const modal = document.querySelector('#project-modal');
 let modalTrigger = null;
 const fillModal = (project) => {
   modal.querySelector('.modal-index').textContent = project.index;
+  modal.querySelector('.modal-status').textContent = project.status;
   modal.querySelector('#modal-title').textContent = project.title;
   modal.querySelector('.modal-description').textContent = project.description;
+  modal.querySelector('.modal-features-heading').textContent = project.scopeLabel;
   modal.querySelector('.modal-features').innerHTML = project.features.map((feature) => `<li>${feature}</li>`).join('');
+  modal.querySelector('.modal-evidence').textContent = project.evidence;
   modal.querySelector('.modal-tags').innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join('');
 };
 document.querySelectorAll('.project-detail').forEach((button) => button.addEventListener('click', () => {

@@ -19,6 +19,10 @@ No requiere backend, base de datos, servicios de pago ni tarjeta bancaria. Puede
 
 FidelyFood es el Trabajo Final de Grado de Anthony Montagioni: una plataforma de fidelización multi-restaurante construida con Angular/Ionic, Java, Spring Boot, MySQL, JWT y API REST. El caso de estudio técnico está disponible en [projects/fidelyfood/](projects/fidelyfood/) y la memoria oficial se publica junto a la página.
 
+## Catálogo y estado de los proyectos
+
+El catálogo público está disponible en [projects/](projects/). Distingue entre proyectos con evidencia pública, proyectos que todavía están en documentación, experiencia profesional cuya evidencia no puede publicarse por confidencialidad y un roadmap técnico marcado explícitamente como no completado. No presenta demos, métricas ni repositorios como disponibles cuando no existe una URL pública verificable.
+
 ## Capturas
 
 No se incluyen capturas estáticas para que el repositorio permanezca ligero. La vista definitiva se puede revisar localmente con `npm run dev` o en la URL de GitHub Pages después de publicar.
@@ -51,7 +55,7 @@ El resultado se genera en `dist/`. Es una carpeta estática y autónoma, prepara
 
 La foto profesional se encuentra en `src/assets/images/profile-anthony.png`. La web la incorpora en el Hero y en la sección **Sobre mí**, con avatar de respaldo `AM` únicamente si el archivo no puede cargarse.
 
-Para un resultado nítido y ligero, usa una foto cuadrada de al menos 800 × 800 px, en JPG optimizado y preferiblemente por debajo de 500 KB. La imagen se muestra con `object-fit: cover` y no se deforma.
+La foto actual está en PNG. Para reducir la carga inicial en una futura optimización, conviene conservar una copia optimizada de menos de 500 KB, manteniendo una resolución cuadrada de al menos 800 × 800 px. La imagen se muestra con `object-fit: cover` y no se deforma.
 
 ### CV descargable
 
@@ -128,7 +132,7 @@ Si más adelante prefieres recepción de formularios sin depender del cliente de
 ├── .github/workflows/deploy-pages.yml  # Despliegue automático gratuito
 ├── public/cv/                           # CV PNG descargable
 ├── public/projects/fidelyfood/           # Memoria TFG y diagramas SVG
-├── projects/fidelyfood/                  # Caso de estudio técnico
+├── projects/                             # Catálogo y casos de estudio técnicos
 ├── assets/                               # CSS y JavaScript del caso de estudio
 ├── dist/                               # Sitio compilado para publicar
 ├── scripts/build.mjs                   # Build sin dependencias
