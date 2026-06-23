@@ -23,6 +23,15 @@ FidelyFood es el Trabajo Final de Grado de Anthony Montagioni: una plataforma de
 
 El catálogo público está disponible en [projects/](projects/). Distingue entre proyectos con evidencia pública, proyectos que todavía están en documentación, experiencia profesional cuya evidencia no puede publicarse por confidencialidad y un roadmap técnico marcado explícitamente como no completado. No presenta demos, métricas ni repositorios como disponibles cuando no existe una URL pública verificable.
 
+## Evidencia técnica
+
+- [Engineering](engineering/) resume patrones de arquitectura Spring Boot, JWT, APIs REST, Angular y validaciones con referencia a evidencia publicada.
+- [AI Automation](automation/) documenta patrones de integración con IA de forma anonimizada.
+- [Cybersecurity Lab](cybersecurity/) diferencia laboratorios planificados de trabajo ya verificable.
+- [ValenRuta](projects/valenruta/) dispone de un dossier de alcance mientras se reúnen repositorio, capturas y arquitectura verificable.
+
+Las capturas reales se añaden por proyecto dentro de `public/projects/<slug>/screenshots/`. Al incluir imágenes se puede utilizar el contenedor `data-screenshot-gallery`; las imágenes se abren con teclado o clic sin librerías externas.
+
 ## Capturas
 
 No se incluyen capturas estáticas para que el repositorio permanezca ligero. La vista definitiva se puede revisar localmente con `npm run dev` o en la URL de GitHub Pages después de publicar.
